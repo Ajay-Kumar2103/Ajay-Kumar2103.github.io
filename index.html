@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>Miniport by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+          
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/pp.png" alt="" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hey. I am <strong>Ajay Kumar</strong>.</h1>
+							</header>
+
+		<!--Text rotate--> 
+    <title>Text Rotate Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .txt-rotate {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .txt-rotate > .wrap {
+            border-right: 0.08em solid #007bff; /* Adds a cursor-like effect */
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+
+    <h2>I'm a 
+        <span
+           class="txt-rotate"
+           data-period="2000"
+           data-rotate='[ "DevOps Engineer..." ]'>
+        </span>
+    </h2>
+
+    <script>
+        // TextRotate function for dynamic rotation effect
+        class TextRotate {
+            constructor(el, toRotate, period) {
+                this.el = el;
+                this.toRotate = toRotate;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.isDeleting = false;
+                this.tick();
+            }
+
+            tick() {
+                const i = this.loopNum % this.toRotate.length;
+                const fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = `<span class="wrap">${this.txt}</span>`;
+
+                const delta = this.isDeleting ? 100 : 200;
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    this.isDeleting = true;
+                    setTimeout(() => this.tick(), this.period);
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    setTimeout(() => this.tick(), 500);
+                } else {
+                    setTimeout(() => this.tick(), delta);
+                }
+            }
+        }
+
+        // Initialize the text rotation
+        window.onload = () => {
+            const elements = document.getElementsByClassName('txt-rotate');
+            for (let i = 0; i < elements.length; i++) {
+                const toRotate = elements[i].getAttribute('data-rotate');
+                const period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TextRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+        };
+    </script>
+
+
+
+							<p>Focussed on creating efficient and scalable solutions</p>
+							<a href="https://drive.google.com/file/d/1M2GvxeSPPRYS6g8iw2peDacK1jtfHdnP/view?usp=drive_link" class="button small scrolly" target="_blank">Resume</a>
+						
+						<ul class="social">
+							<li><a href="https://github.com/Ajay-Kumar2103" target="_blank"><i class="fab fa-github"></i></a></li>
+							<li><a href="http://www.linkedin.com/in/ajay-kumar2103" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="mailto:ajaymannam97@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!--About Me-->
+			<article id ="about" class="wrapper style5">
+				<div class="container">
+					<h2>About me</h2>
+					<p>I'm a passionate cloud enthusiast, currently a graduate student at the University of South Dakota, 
+						with a keen interest in networking, security, Machine Learning and AI.</p>
+
+						<p>With over 2 years of professional experience as a Linux administrator, I have gained strong knowledge of
+						 Linux OS administrative tasks, monitoring, and more. I am a continuous learner and have gained hands-on 
+						 experience with leading technologies such as Docker, Kubernetes, Terraform, and Ansible. I specialize in
+						  automating complex workflows and implementing CI/CD pipelines for seamless software delivery.</p>
+						
+						<p>I look forward to connecting with like-minded individuals, exchanging ideas, and working on meaningful 
+							projects. Feel free to reach out on LinkedIn—let’s create something amazing together!</p>
+						
+						
+				</div>
+			</article>
+
+	
+
+
+		<!--Skills-->
+
+
+		<article id="skills" class="wrapper style5">
+            <div class="container">
+				<header>
+					<h2>Technical Skills</h2>
+				</header>
+				<ul class="social">
+					<li><i class="devicon-docker-plain-wordmark colored"></i></li>
+					<li><i class="devicon-amazonwebservices-plain-wordmark colored"></i></li> 
+                    <li><i class="devicon-jenkins-line colored"></i></li>
+					
+					<li><i class="devicon-kubernetes-plain-wordmark colored"></i></li>
+					<li><i class="devicon-ansible-plain-wordmark colored"></i></li>
+					<li><i class="devicon-grafana-plain-wordmark colored"></i></li>
+					<li><i class="devicon-prometheus-plain-wordmark colored"></i></li>
+					<li><i class="devicon-helm-original colored"></i></li>
+					<li><i class="devicon-redhat-plain-wordmark colored"></i></li>
+					<li><i class="devicon-argocd-plain-wordmark colored"></i></li>
+					<li> <i class="devicon-bash-plain colored"></i></li>
+					<li><i class="devicon-python-plain-wordmark colored"></i></li>
+					<li><i class="devicon-yaml-plain colored"></i></li>
+					
+		   	
+				</ul>
+			</div>
+
+		</article>
+
+		<!-- Portfolio -->
+			<article id="projects" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Personal Projects</h2>
+						<p>Below are the personal projects where I have applied and demonstrated my skills effectively.</p>
+					</header>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/Ajay-Kumar2103/AWS_Cloudwatch" target="_blank" class="image featured"><img src="images/img-1.png" alt="" /></a>
+								<h3><a href="https://github.com/Ajay-Kumar2103/AWS_Cloudwatch" target="_blank">Monitoring Dashboard AWS CloudWatch</a></h3>
+								<p>Tools used – AWS CloudWatch, Lambda.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/Ajay-Kumar2103/2048-game" target="_blank" class="image featured"><img src="images/img-2.png" alt="" /></a>
+								<h3><a href="https://github.com/Ajay-Kumar2103/2048-game" target="_blank">End-To-End Project on EKS</a></h3>
+								<p>Tools used – Amazon EKS, AWS Fargate, Docker, Ingress Controller.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/Ajay-Kumar2103/AWS_With_Terraform" class="image featured"><img src="images/img-3.png" alt="" /></a>
+								<h3><a href="https://github.com/Ajay-Kumar2103/AWS_With_Terraform">AWS_With_Terraform</a></h3>
+								<p>Tools used – AWS, Terraform, CloudFront, Git.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://github.com/Ajay-Kumar2103/Jenkins-Zero-To-Hero" target="_blank" class="image featured"><img src="images/img-4.jpeg" alt="" /></a>
+								<h3><a href="https://github.com/Ajay-Kumar2103/Jenkins-Zero-To-Hero" target="_blank">End-To-End CI/CD Implementation</a></h3>
+								<p>Tools used – Jenkins, Docker, Git, Argo CD .</p>
+							</article>
+						</div>
+						<!--
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+								<h3><a href="#">Feugiat aliquam</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+								<h3><a href="#">Sed amet ornare</a></h3>
+								<p>Ornare nulla proin odio consequat.</p>
+							</article>
+						</div> 
+						-->
+					</div>
+					<footer>
+						<a href="http://www.linkedin.com/in/ajay-kumar2103" class="button medium scrolly" target="_blank">Let's connect</a>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Contact -->
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Contact</h2>
+						<p>If you would like to get in touch with me, feel free to reach out.</p>
+					</header>
+					<div class="row">
+						<div class="col-6 col-6-medium col-12-small">
+								<span class="hover-text">Call: 929 305 2094</span>
+													
+
+						</div>
+						<div class="col-6 col-6-medium col-12-small">
+								<span class="hover-text">Email: ajaymannam97@gmail.com</span>
+						</div>
+					</div>
+				
+	
+					
+		
+					
+					<!--
+					<div class="row">
+						<div class="col-12">
+							<form method="post" action="#">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="text" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-12">
+							
+								
+								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
+								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
+								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
+								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
+								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
+								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
+								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
+								-->
+							</ul>
+						</div>
+					</div>
+				
+				</div>
+			</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
